@@ -1,0 +1,12 @@
+# Project place file
+/luau-caching-and-memoization.rbxlx
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+# OS-related files
+desktop.ini
+.DS_Store
+
+sourcemap.json
