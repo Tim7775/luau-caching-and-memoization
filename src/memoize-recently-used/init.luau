@@ -15,8 +15,10 @@
 ]]
 
 local weakKeys = { __mode = "k" }
-local function memoizeRecentlyUsed<K, V>(n: number, callback: (K) -> V): (K) -> V
-	assert(n >= 1, "param 'n' must be >= 1")
+
+--memoizes between pageSize and 2*pageSize results
+local function memoizeRecentlyUsed<K, V>(pageSize: number, callback: (K) -> V): (K) -> V
+	assert(pageSize >= 1, "param 'pageSize' must be >= 1")
 	local hotCache = setmetatable({}, weakKeys)
 	local coldCache = setmetatable({}, weakKeys)
 	local size = 0
@@ -32,7 +34,7 @@ local function memoizeRecentlyUsed<K, V>(n: number, callback: (K) -> V): (K) -> 
 		end
 		hotCache[key] = value
 		size += 1
-		if size > n then
+		if size > pageSize then
 			size = 0
 			coldCache = hotCache
 			hotCache = setmetatable({}, weakKeys)
