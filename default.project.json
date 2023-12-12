@@ -1,6 +1,30 @@
 {
   "name": "luau-caching-and-memoization",
   "tree": {
-    "$path": "src/"
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "modules": {
+        "$path": "src"
+      }
+    },
+    "TestService": {
+			"$className": "TestService",
+			"$properties": {
+				"ExecuteWithStudioRun": true
+			},
+			"Packages": {
+				"$path": "test/Packages"
+			},
+			"run": {
+				"$path": "test/run.server.luau"
+			}
+		},
+    "SoundService": {
+			"$className": "SoundService",
+      "$properties": {
+        "RespectFilteringEnabled": true
+      }
+    }
   }
 }
