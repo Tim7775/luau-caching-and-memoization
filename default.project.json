@@ -9,19 +9,19 @@
       }
     },
     "TestService": {
-			"$className": "TestService",
-			"$properties": {
-				"ExecuteWithStudioRun": true
-			},
-			"Packages": {
-				"$path": "test/Packages"
-			},
-			"run": {
-				"$path": "test/run.server.luau"
-			}
-		},
+      "$className": "TestService",
+      "$properties": {
+        "ExecuteWithStudioRun": true
+      },
+      "Packages": {
+        "$path": "test/Packages"
+      },
+      "run": {
+        "$path": "test/run.server.luau"
+      }
+    },
     "SoundService": {
-			"$className": "SoundService",
+      "$className": "SoundService",
       "$properties": {
         "RespectFilteringEnabled": true
       }

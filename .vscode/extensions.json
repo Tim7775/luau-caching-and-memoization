@@ -1,7 +1,8 @@
 {
-	"recommendations": [
-		"Kampfkarren.selene-vscode",
-		"JohnnyMorganz.luau-lsp",
-		"JohnnyMorganz.stylua",
-	]
+  "recommendations": [
+    "Kampfkarren.selene-vscode",
+    "JohnnyMorganz.luau-lsp",
+    "JohnnyMorganz.stylua",
+    "editorconfig.editorconfig",
+  ]
 }
