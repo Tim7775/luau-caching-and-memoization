@@ -1,7 +1,7 @@
 [package]
 name = "tim7775/multi-cache"
 description = "https://github.com/tim7775/luau-caching-and-memoization"
-version = "0.1.0"
+version = "0.1.1"
 license = "MIT"
 authors = ["Tim7775"]
 registry = "https://github.com/UpliftGames/wally-index"

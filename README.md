@@ -15,4 +15,4 @@
 ### Caches
 | Module | Dependency | Description |
 | -- | -- | -- |
-| [MultiCache](https://github.com/Tim7775/luau-caching-and-memoization/tree/main/src/multi-cache/init.luau) | [`MultiCache = "tim7775/multi-cache@0.1.0"`](https://wally.run/package/tim7775/multi-cache?version=0.1.0) | Cache that stores any number of values in one entry and accepts keys consisting of multiple values|
+| [MultiCache](https://github.com/Tim7775/luau-caching-and-memoization/tree/main/src/multi-cache/init.luau) | [`MultiCache = "tim7775/multi-cache@0.1.1"`](https://wally.run/package/tim7775/multi-cache?version=0.1.1) | Cache that stores any number of values in one entry and accepts keys consisting of multiple values|

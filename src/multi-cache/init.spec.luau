@@ -71,5 +71,11 @@ return function()
 				expect(select("#", cache:Get(key))).to.equal(i)
 			end
 		end)
+		it("should throw when trying to write to a cache with a multi-key that belongs to a different cache", function()
+			local unownedKey = MultiCache.new():GetMultiKey("Key")
+			expect(function()
+				cache:Set(unownedKey, true)
+			end).to.throw("param 'key' must be a key returned by this cache's GetMultiKey() method")
+		end)
 	end)
 end
