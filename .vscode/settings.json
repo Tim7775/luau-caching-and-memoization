@@ -1,10 +1,9 @@
 {
+  "luau-lsp.types.roblox": false,
   "luau-lsp.types.definitionFiles": [
-    "testez.d.luau"
+    "testez.d.luau",
+    "task.d.luau"
   ],
-  "luau-lsp.require.directoryAliases": {
-    "@lune/": "~/.lune/.typedefs/0.7.11/"
-  },
   "[lua]": {
     "editor.defaultFormatter": "JohnnyMorganz.stylua",
     "editor.formatOnSave": true,

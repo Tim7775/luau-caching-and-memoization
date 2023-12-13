@@ -13,8 +13,8 @@
       "$properties": {
         "ExecuteWithStudioRun": true
       },
-      "Packages": {
-        "$path": "test/Packages"
+      "TestEz": {
+        "$path": "test/testez"
       },
       "run": {
         "$path": "test/run.server.luau"

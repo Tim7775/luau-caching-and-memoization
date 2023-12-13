@@ -1,12 +1,11 @@
-# Roblox Studio lock files
+# Roblox Studio files
+*.rbxlx
 *.rbxlx.lock
+*.rbxl
 *.rbxl.lock
 
 # OS-related files
 desktop.ini
 .DS_Store
 
-/test/wally.lock
-/test/Packages
-/test/*.rbxl
 sourcemap.json
