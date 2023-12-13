@@ -1,2 +1,2 @@
-std = "roblox+testez"
-exclude = ["testez.d.luau", "test/**"]
+std = "luau+task+testez"
+exclude = ["testez.d.luau", "task.d.luau", "test/**"]

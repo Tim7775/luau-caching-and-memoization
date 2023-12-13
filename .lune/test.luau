@@ -1,4 +1,3 @@
---# selene: allow(incorrect_standard_library_use)
 local fs = require("@lune/fs")
 local process = require("@lune/process")
 local color = require("@lune/stdio").color

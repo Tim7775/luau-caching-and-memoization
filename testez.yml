@@ -1,5 +1,7 @@
 ---
 globals:
+  script: #Allow .spec files to require their parent
+    any: true
   FIXME:
     args:
       - required: false

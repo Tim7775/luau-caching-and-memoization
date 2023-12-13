@@ -2,6 +2,7 @@
 
 # luau-caching-and-memoization
 
+Most libraries are pure Luau, some require Roblox's task library (a polyfill is available [here](https://github.com/Anaminus/roblox-library/tree/3ca34e755188c168e2dae7d0930feec557c3d2f3/modules/TaskPolyfill))
 ### Memoization functions
 | Module | Dependency | Description |
 | -- | -- | -- |

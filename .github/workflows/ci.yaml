@@ -33,3 +33,19 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         version: v0.19.1
         args: --check ./src
+
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install Aftman
+      uses: ok-nick/setup-aftman@v0
+
+    - name: Build sourcemap
+      run: rojo sourcemap default.project.json --output sourcemap.json
+
+    - name: Analyze
+      run: luau-lsp analyze --definitions=task.d.luau --definitions=testez.d.luau --base-luaurc=.luaurc --sourcemap=sourcemap.json src/
