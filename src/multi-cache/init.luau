@@ -34,7 +34,7 @@ end
 local function new<K..., V...>(): MultiCache<K..., V...>
 	local weakKeys = { __mode = "k" }
 	local multiKeyRoot = setmetatable({}, weakKeys)
-	local results = setmetatable({}, weakKeys)
+	local entries = setmetatable({}, weakKeys)
 
 	--Returns an identical multi key if it gets called on the same MultiCache with the same arguments
 	local function GetMultiKey(_: MultiCache<K..., V...>, ...: K...): MultiKey
@@ -52,18 +52,18 @@ local function new<K..., V...>(): MultiCache<K..., V...>
 
 	local function Set(_: MultiCache<K..., V...>, key: MultiKey, ...: V...)
 		assert(getmetatable(key) == weakKeys, "param 'key' must be a key returned by this cache's GetMultiKey() method")
-		results[key] = table.pack(...)
+		entries[key] = table.pack(...)
 	end
 
 	--Returns the value(s) set by the Set() method, throws if Set() has not been called with this key
 	local function Get(_: MultiCache<K..., V...>, key: MultiKey): V...
-		local result: any = results[key]
+		local result = entries[key] :: any
 		return table.unpack(result, 1, result.n)
 	end
 
 	--Returns true if Set() has been called with this key
 	local function Has(_: MultiCache<K..., V...>, key: MultiKey): boolean
-		return results[key] ~= nil
+		return entries[key] ~= nil
 	end
 
 	return table.freeze({
