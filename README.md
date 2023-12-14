@@ -16,6 +16,7 @@ Most libraries are pure Luau, some require Roblox's task library (a polyfill is 
 ### Caches
 | Module | Dependency | Description |
 | -- | -- | -- |
+| [LRUCache](https://github.com/Tim7775/luau-caching-and-memoization/tree/main/src/lru-cache/init.luau) | [`LRUCache = "tim7775/lru-cache@0.1.0"`](https://wally.run/package/tim7775/lru-cache?version=0.1.0) | Cache with a least-recently-used cache eviction policy|
 | [MultiCache](https://github.com/Tim7775/luau-caching-and-memoization/tree/main/src/multi-cache/init.luau) | [`MultiCache = "tim7775/multi-cache@0.1.1"`](https://wally.run/package/tim7775/multi-cache?version=0.1.1) | Cache that stores any number of values in one entry and accepts keys consisting of multiple values|
 | [NMRURRCache](https://github.com/Tim7775/luau-caching-and-memoization/tree/main/src/nmru-rr-cache/init.luau) | [`NMRURRCache = "tim7775/nmru-rr-cache@0.1.0"`](https://wally.run/package/tim7775/nmru-rr-cache?version=0.1.0) | Not-most-recently-used random replacement cache|
 | [RRCache](https://github.com/Tim7775/luau-caching-and-memoization/tree/main/src/rr-cache/init.luau) | [`RRCache = "tim7775/rr-cache@0.1.0"`](https://wally.run/package/tim7775/rr-cache?version=0.1.0) | Random replacement cache|
