@@ -10,4 +10,7 @@
   },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
+  "search.exclude": {
+    "test/testez": true,
+  }
 }
