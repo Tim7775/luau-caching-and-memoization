@@ -2,30 +2,30 @@
 globals:
   task.cancel:
     args:
-    - type:
-        display: thread
+      - type:
+          display: thread
   task.defer:
     args:
-    - type: function
-    - required: false
-      type: '...'
+      - type: function
+      - required: false
+        type: "..."
   task.delay:
     args:
-    - required: false
-      type: number
-    - type: function
-    - required: false
-      type: '...'
+      - required: false
+        type: number
+      - type: function
+      - required: false
+        type: "..."
   task.desynchronize:
     args: []
   task.spawn:
     args:
-    - type: function
-    - required: false
-      type: '...'
+      - type: function
+      - required: false
+        type: "..."
   task.synchronize:
     args: []
   task.wait:
     args:
-    - required: false
-      type: number
+      - required: false
+        type: number

@@ -1,6 +1,6 @@
 ---
 globals:
-  script: #Allow .spec files to require their parent
+  script: #Allow roblox requires in .spec files
     any: true
   FIXME:
     args:
