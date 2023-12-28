@@ -1,2 +1,2 @@
 std = "luau+task+testez"
-exclude = ["testez.d.luau", "task.d.luau", "test/**"]
+exclude = ["*.d.luau", "test/testez/**"]
