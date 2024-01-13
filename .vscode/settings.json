@@ -2,17 +2,20 @@
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "search.exclude": {
-    "test/testez": true
+    "test/testez": true,
   },
-  "[typescript][json][json5][jsonc][yaml][github-actions-workflow]": {
+  "files.exclude": {
+    "node_modules/": true,
+  },
+  "[typescript][json][jsonc][yaml][github-actions-workflow]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[lua][luau]": {
     "editor.defaultFormatter": "JohnnyMorganz.stylua",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "stylua.targetReleaseVersion": "v0.19.1",
   "luau-lsp.types.roblox": false,
-  "luau-lsp.types.definitionFiles": ["testez.d.luau", "task.d.luau"]
+  "luau-lsp.types.definitionFiles": ["testez.d.luau", "task.d.luau"],
 }

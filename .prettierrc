@@ -1,4 +1,12 @@
 {
   "printWidth": 120,
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": ["**/.vscode/*.json", "**/tsconfig.json", "**/tsconfig.*.json"],
+      "options": {
+        "parser": "jsonc"
+      }
+    }
+  ]
 }
