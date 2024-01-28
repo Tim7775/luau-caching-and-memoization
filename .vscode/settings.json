@@ -15,7 +15,7 @@
     "editor.defaultFormatter": "JohnnyMorganz.stylua",
     "editor.formatOnSave": true,
   },
-  "stylua.targetReleaseVersion": "v0.19.1",
+  "stylua.targetReleaseVersion": "v0.20.0",
   "luau-lsp.types.roblox": false,
   "luau-lsp.types.definitionFiles": ["testez.d.luau", "task.d.luau"],
 }

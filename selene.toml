@@ -1,2 +1,2 @@
 std = "luau+task+testez"
-exclude = ["*.d.luau", "test/testez/**"]
+exclude = ["**/node_modules/**", "*.d.luau", "test/testez/**"]

@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install Aftman
-        uses: ok-nick/setup-aftman@v0
+        uses: ok-nick/setup-aftman@v0.4.2
 
       - name: Lint
         run: |
@@ -31,7 +31,7 @@ jobs:
       - uses: JohnnyMorganz/stylua-action@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          version: v0.19.1
+          version: v0.20.0
           args: --check ./src
 
   analyze:
@@ -44,7 +44,7 @@ jobs:
           submodules: "true"
 
       - name: Install Aftman
-        uses: ok-nick/setup-aftman@v0
+        uses: ok-nick/setup-aftman@v0.4.2
 
       - name: Build sourcemap
         run: rojo sourcemap default.project.json --output sourcemap.json
