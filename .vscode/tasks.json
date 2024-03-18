@@ -4,7 +4,7 @@
     {
       "type": "shell",
       "label": "Test",
-      "command": "rojo build --output test/test.rbxl; run-in-roblox --place test/test.rbxl --script test/run.server.luau",
+      "command": "rojo build --output test/test.rbxl; run-in-roblox --place test/test.rbxl --script test/run.server.lua",
       "group": {
         "kind": "test",
         "isDefault": true,
