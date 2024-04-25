@@ -1,5 +1,7 @@
 {
   "devDependencies": {
-    "prettier": "3.2.2"
+    "@rbxts/compiler-types": "^2.3.0-types.1",
+    "@rbxts/types": "^1.0.770",
+    "prettier": "3.2.5"
   }
 }

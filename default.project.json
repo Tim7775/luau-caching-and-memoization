@@ -1,5 +1,6 @@
 {
   "name": "luau-caching-and-memoization",
+  "globIgnorePaths": ["**/wally.toml", "**/package.json", "**/*.ts"],
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {
