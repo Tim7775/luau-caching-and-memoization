@@ -1,0 +1,25 @@
+{
+  "name": "@rbxts/memoize-recently-used",
+  "version": "0.1.1",
+  "author": "Tim7775",
+  "description": "Memoization function with a least-recently-used cache eviction policy.",
+  "repository": "github:Tim7775/luau-caching-and-memoization",
+  "license": "MIT",
+  "keywords": [
+    "memoize",
+    "memoization",
+    "cache",
+    "caching",
+    "lru",
+    "hlru"
+  ],
+  "main": "init.lua",
+  "types": "index.d.ts",
+  "files": [
+    "init.lua",
+    "index.d.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

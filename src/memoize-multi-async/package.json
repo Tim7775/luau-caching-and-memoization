@@ -1,0 +1,23 @@
+{
+  "name": "@rbxts/memoize-multi-async",
+  "version": "0.1.1",
+  "author": "Tim7775",
+  "description": "Memoize async function calls with multiple parameters and return values.",
+  "repository": "github:Tim7775/luau-caching-and-memoization",
+  "license": "MIT",
+  "keywords": [
+    "memoize",
+    "memoization",
+    "cache",
+    "caching"
+  ],
+  "main": "init.lua",
+  "types": "index.d.ts",
+  "files": [
+    "init.lua",
+    "index.d.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
