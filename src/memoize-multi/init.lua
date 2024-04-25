@@ -32,7 +32,8 @@ local function getMultiKey(node, ...)
 	return node
 end
 
-local function memoizeMulti<P..., R...>(callback: (P...) -> R...): (P...) -> R...
+--- Memoize function calls with multiple parameters and return values
+local function memoizeMulti<P..., R...>(callback: Callback<P..., R...>): Callback<P..., R...>
 	local multiKeyRoot = setmetatable({}, weakKeys)
 	local resultRegistry = setmetatable({}, weakKeys)
 	return function(...: P...)
@@ -46,4 +47,5 @@ local function memoizeMulti<P..., R...>(callback: (P...) -> R...): (P...) -> R..
 	end
 end
 
+type Callback<P..., R...> = (P...) -> R...
 return memoizeMulti

@@ -36,7 +36,8 @@ local function packResult(success, ...): (boolean, { any })
 	return success, table.pack(...)
 end
 
-local function memoizeMultiAsync<P..., R...>(callback: (P...) -> R...): (P...) -> R...
+--- Memoize async function calls with multiple parameters and return values
+local function memoizeMultiAsync<P..., R...>(callback: Callback<P..., R...>): Callback<P..., R...>
 	local multiKeyRoot = setmetatable({}, weakKeys)
 	local resultRegistry = setmetatable({}, weakKeys)
 	local threadRegistry = {}
@@ -64,4 +65,5 @@ local function memoizeMultiAsync<P..., R...>(callback: (P...) -> R...): (P...) -
 	end
 end
 
+type Callback<P..., R...> = (P...) -> R...
 return memoizeMultiAsync
