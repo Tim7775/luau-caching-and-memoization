@@ -16,7 +16,8 @@
 
 local weakKeys = { __mode = "k" }
 
---memoizes between pageSize and 2*pageSize results
+--- Memoization function with a least-recently-used cache eviction policy.
+--- Memoizes between pageSize and 2*pageSize results.
 local function memoizeRecentlyUsed<K, V>(pageSize: number, callback: (K) -> V): (K) -> V
 	assert(pageSize >= 1, "param 'pageSize' must be >= 1")
 	local hotCache = setmetatable({}, weakKeys)

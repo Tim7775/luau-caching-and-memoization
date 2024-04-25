@@ -14,6 +14,7 @@
 	* limitations under the License.
 ]]
 
+--- Memoize function calls for a single frame
 local function memoizeFrame<K, V>(callback: (K) -> V): (K) -> V
 	local scheduledPurge: thread? = nil
 	local cache: { [K]: V } = {}
@@ -24,13 +25,15 @@ local function memoizeFrame<K, V>(callback: (K) -> V): (K) -> V
 	end
 
 	return function(key: K)
-		if cache[key] == nil then
-			cache[key] = callback(key)
+		local result = cache[key]
+		if result == nil then
+			result = callback(key)
+			cache[key] = result
 			if not scheduledPurge then
 				scheduledPurge = task.delay(0, purgeCache)
 			end
 		end
-		return cache[key]
+		return result
 	end
 end
 
