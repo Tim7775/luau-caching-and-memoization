@@ -6,10 +6,9 @@
 ### Testing
 [Roblox Studio](https://create.roblox.com/docs/studio/setting-up-roblox-studio) is required to run unit tests.
 
-In VSCode tests can be ran as follows:
-- Open the command palette (ctrl+shift+P) and select `Tasks: Run test Task`
+In VSCode you can run tests by opening the command palette (ctrl+shift+P) and selecting: `Tasks: Run test Task`.
 
-In other editors tests can be ran as follows:
+In other editors you can run tests by following these steps:
 - Build the project via `rojo build --output test/test.rbxl`
 - Open the generated Roblox file.
 - Run the game and the results will be printed to the output.
