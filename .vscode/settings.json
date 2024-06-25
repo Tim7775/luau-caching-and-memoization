@@ -4,9 +4,6 @@
   "search.exclude": {
     "test/testez": true,
   },
-  "files.exclude": {
-    "node_modules/": true,
-  },
   "[typescript][json][jsonc][yaml][github-actions-workflow]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
@@ -16,6 +13,6 @@
     "editor.formatOnSave": true,
   },
   "stylua.targetReleaseVersion": "v0.20.0",
-  "luau-lsp.types.roblox": false,
+  "luau-lsp.platform.type": "standard",
   "luau-lsp.types.definitionFiles": ["testez.d.luau", "task.d.luau"],
 }
