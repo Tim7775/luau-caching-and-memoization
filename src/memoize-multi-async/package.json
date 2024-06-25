@@ -15,10 +15,10 @@
     "cache",
     "caching"
   ],
-  "main": "init.lua",
+  "main": "init.luau",
   "types": "index.d.ts",
   "files": [
-    "init.lua",
+    "init.luau",
     "index.d.ts"
   ],
   "scripts": {},
