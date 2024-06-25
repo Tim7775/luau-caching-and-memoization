@@ -25,22 +25,22 @@ local function memoizeRecentlyUsed<K, V>(pageSize: number, callback: (K) -> V): 
 	local size = 0
 
 	return function(key: K)
-		local value = hotCache[key]
-		if value ~= nil then
-			return value
+		local result = hotCache[key]
+		if result ~= nil then
+			return result
 		end
-		value = coldCache[key]
-		if value == nil then
-			value = callback(key)
+		result = coldCache[key]
+		if result == nil then
+			result = callback(key)
 		end
-		hotCache[key] = value
+		hotCache[key] = result
 		size += 1
 		if size > pageSize then
 			size = 0
 			coldCache = hotCache
 			hotCache = setmetatable({}, weakKeys)
 		end
-		return value
+		return result
 	end
 end
 
