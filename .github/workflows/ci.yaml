@@ -16,8 +16,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Aftman
-        uses: ok-nick/setup-aftman@v0.4.2
+      - name: Install tools using Rokit
+        uses: CompeyDev/setup-rokit@v0.1.2
 
       - name: Lint
         run: |
@@ -43,8 +43,8 @@ jobs:
         with:
           submodules: "true"
 
-      - name: Install Aftman
-        uses: ok-nick/setup-aftman@v0.4.2
+      - name: Install tools using Rokit
+        uses: CompeyDev/setup-rokit@v0.1.2
 
       - name: Build sourcemap
         run: rojo sourcemap default.project.json --output sourcemap.json

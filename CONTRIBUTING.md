@@ -1,6 +1,6 @@
 ### Project Setup
-[Aftman](https://github.com/LPGhatguy/aftman) and [Node.js](https://nodejs.org) are required to setup the project.
-- Run `aftman install` in the project directory to install the required tools.
+[Rokit](https://github.com/rojo-rbx/rokit) and [Node.js](https://nodejs.org) are required to setup the project.
+- Run `rokit install` in the project directory to install the required tools.
 - Run `npm install` to install npm dependencies.
 
 ### Testing
