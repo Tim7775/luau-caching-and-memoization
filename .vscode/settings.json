@@ -1,9 +1,6 @@
 {
   "files.eol": "\n",
   "files.insertFinalNewline": true,
-  "search.exclude": {
-    "test/testez": true,
-  },
   "[typescript][json][jsonc][yaml][github-actions-workflow]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
@@ -13,5 +10,5 @@
     "editor.formatOnSave": true,
   },
   "luau-lsp.platform.type": "standard",
-  "luau-lsp.types.definitionFiles": ["testez.d.luau", "task.d.luau"],
+  "luau-lsp.types.definitionFiles": ["task.d.luau"],
 }

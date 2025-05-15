@@ -1,4 +1,14 @@
 {
   "version": "2.0.0",
-  "tasks": [],
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Test",
+      "command": "lune run tests/_run",
+      "group": {
+        "kind": "test",
+        "isDefault": true,
+      },
+    },
+  ],
 }

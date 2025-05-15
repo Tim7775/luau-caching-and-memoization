@@ -19,6 +19,13 @@ stylua = [{ name = "pesde/stylua", version = "=2.0.2", index = "https://github.c
 ref_ty = "pesde"
 index_url = "https://github.com/daimond113/pesde-index"
 
+[graph."itsfrank/frktest@0.0.2 lune"]
+direct = ["frktest", { name = "itsfrank/frktest", version = "^0.0.2", index = "default" }, "dev"]
+
+[graph."itsfrank/frktest@0.0.2 lune".pkg_ref]
+ref_ty = "pesde"
+index_url = "https://github.com/daimond113/pesde-index"
+
 [graph."jiwonz/dirs@0.3.0 lune".dependencies]
 greentea = ["corecii/greentea@0.4.11 lune", "standard"]
 pathfs = ["jiwonz/pathfs@0.3.2 lune", "standard"]

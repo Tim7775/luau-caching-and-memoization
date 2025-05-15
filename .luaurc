@@ -4,5 +4,10 @@
     "*": true
   },
   "lintErrors": false,
-  "typeErrors": true
+  "typeErrors": true,
+  "aliases": {
+    "lune": "~/.lune/.typedefs/0.8.9/",
+    "pkg": "./lune_packages/",
+    "lib": "./src/"
+  }
 }

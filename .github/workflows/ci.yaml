@@ -17,12 +17,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install the Pesde CLI along with Lune
-        uses: ernisto/setup-pesde@main
+        uses: ernisto/setup-pesde@5f9a3399d5ae0fe78b014f5f13cd913f27755fb4
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           cache: true
 
       - name: Install dependencies using Pesde
         run: pesde install
+        timeout-minutes: 1
 
       - name: Lint
         run: selene ./src
@@ -35,12 +37,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install the Pesde CLI along with Lune
-        uses: ernisto/setup-pesde@main
+        uses: ernisto/setup-pesde@5f9a3399d5ae0fe78b014f5f13cd913f27755fb4
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           cache: true
 
       - name: Install dependencies using Pesde
         run: pesde install
+        timeout-minutes: 1
 
       - name: Run StyLua check
         run: stylua --check ./src
@@ -55,15 +59,32 @@ jobs:
           submodules: "true"
 
       - name: Install the Pesde CLI along with Lune
-        uses: ernisto/setup-pesde@main
+        uses: ernisto/setup-pesde@5f9a3399d5ae0fe78b014f5f13cd913f27755fb4
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           cache: true
 
       - name: Install dependencies using Pesde
         run: pesde install
+        timeout-minutes: 1
 
       - name: Build sourcemap
         run: rojo sourcemap default.project.json --output sourcemap.json
 
       - name: Analyze
-        run: luau-lsp analyze --definitions=task.d.luau --definitions=testez.d.luau --base-luaurc=.luaurc --sourcemap=sourcemap.json src/
+        run: luau-lsp analyze --definitions=task.d.luau --base-luaurc=.luaurc --sourcemap=sourcemap.json src/
+
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install the Pesde CLI along with Lune
+        uses: ernisto/setup-pesde@5f9a3399d5ae0fe78b014f5f13cd913f27755fb4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          cache: true
+
+      - name: Run tests
+        run: lune run tests/_run
