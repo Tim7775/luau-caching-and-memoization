@@ -6,5 +6,5 @@
 ### Testing
 Execute the following command to run unit tests:
 ```bash
-lune run tests/_run
+lune run run-tests
 ```

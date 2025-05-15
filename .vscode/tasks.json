@@ -4,7 +4,7 @@
     {
       "type": "shell",
       "label": "Test",
-      "command": "lune run tests/_run",
+      "command": "lune run run-tests",
       "group": {
         "kind": "test",
         "isDefault": true,

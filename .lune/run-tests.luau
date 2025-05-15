@@ -1,7 +1,7 @@
 local process = require("@lune/process")
 
 function load_tests()
-	require("./multi-cache.test.luau")()
+	require("../tests/multi-cache.test.luau")()
 end
 
 function run_tests()
