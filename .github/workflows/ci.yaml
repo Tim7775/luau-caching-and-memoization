@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install the Pesde CLI along with Lune
-        uses: lumin-org/setup-pesde@v0.4.1
+        uses: ernisto/setup-pesde@main
         with:
           cache: true
 
@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install the Pesde CLI along with Lune
-        uses: lumin-org/setup-pesde@v0.4.1
+        uses: ernisto/setup-pesde@main
         with:
           cache: true
 
@@ -55,7 +55,7 @@ jobs:
           submodules: "true"
 
       - name: Install the Pesde CLI along with Lune
-        uses: lumin-org/setup-pesde@v0.4.1
+        uses: ernisto/setup-pesde@main
         with:
           cache: true
 
