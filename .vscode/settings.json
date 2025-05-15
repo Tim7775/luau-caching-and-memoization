@@ -12,7 +12,6 @@
     "editor.defaultFormatter": "JohnnyMorganz.stylua",
     "editor.formatOnSave": true,
   },
-  "stylua.targetReleaseVersion": "v0.20.0",
   "luau-lsp.platform.type": "standard",
   "luau-lsp.types.definitionFiles": ["testez.d.luau", "task.d.luau"],
 }

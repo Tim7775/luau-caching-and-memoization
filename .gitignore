@@ -18,3 +18,7 @@ Thumbs.db
 
 # Npm dependencies
 node_modules/
+
+# Pesde dependencies
+luau_packages/
+lune_packages/

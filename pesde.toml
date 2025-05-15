@@ -1,0 +1,20 @@
+name = "tim7775/no_op"
+version = "0.1.0"
+license = "MIT"
+private = true
+
+[engines]
+pesde = "^0.7.0-rc.3"
+lune = "^0.8.9"
+
+[target]
+environment = "lune"
+
+[indices]
+default = "https://github.com/daimond113/pesde-index"
+
+[dev_dependencies]
+stylua = { name = "pesde/stylua", version = "^2.1.0" }
+rojo = { name = "pesde/rojo", version = "^7.5.1" }
+selene = { name = "pesde/selene", version = "^0.28.0" }
+luau-lsp = { name = "pesde/luau_lsp", version = "^1.45.0" }

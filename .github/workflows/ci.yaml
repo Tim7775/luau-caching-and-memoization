@@ -16,23 +16,34 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install tools using Rokit
-        uses: CompeyDev/setup-rokit@v0.1.2
+      - name: Install the Pesde CLI along with Lune
+        uses: lumin-org/setup-pesde@v0.4.1
+        with:
+          cache: true
+
+      - name: Install dependencies using Pesde
+        run: pesde install
 
       - name: Lint
-        run: |
-          selene ./src
+        run: selene ./src
 
   style:
     name: Styling
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: JohnnyMorganz/stylua-action@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install the Pesde CLI along with Lune
+        uses: lumin-org/setup-pesde@v0.4.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          version: v0.20.0
-          args: --check ./src
+          cache: true
+
+      - name: Install dependencies using Pesde
+        run: pesde install
+
+      - name: Run StyLua check
+        run: stylua --check ./src
 
   analyze:
     name: Analyze
@@ -43,8 +54,13 @@ jobs:
         with:
           submodules: "true"
 
-      - name: Install tools using Rokit
-        uses: CompeyDev/setup-rokit@v0.1.2
+      - name: Install the Pesde CLI along with Lune
+        uses: lumin-org/setup-pesde@v0.4.1
+        with:
+          cache: true
+
+      - name: Install dependencies using Pesde
+        run: pesde install
 
       - name: Build sourcemap
         run: rojo sourcemap default.project.json --output sourcemap.json
