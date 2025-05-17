@@ -19,3 +19,4 @@ rojo = { name = "pesde/rojo", version = "^7.5.1" }
 selene = { name = "pesde/selene", version = "^0.28.0" }
 luau-lsp = { name = "pesde/luau_lsp", version = "^1.45.0" }
 frktest = { name = "itsfrank/frktest", version = "^0.0.2" }
+pathfs = { name = "jiwonz/pathfs", version = "^0.6.0-rc.4" }
